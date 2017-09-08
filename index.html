@@ -11,14 +11,21 @@
     <script type="text/javascript" charset="utf-8">
       	mui.init();
     </script>
+    <style type="text/css">
+    	body{
+    	  text-align: center;
+    	  margin: auto;
+    	}
+    	ol,ul{width:50%;margin:auto;text-align: left;}
+    </style>
 </head>
 <body>
-  <h1>这里是git代码测试</h1>
+  <h4>这里是git代码测试</h4>
   <div id='app'>
     <input v-model="hello">
     <div>{{hello}}</div>
     <span v-bind:title="message">
-      鼠标悬停几秒钟查看此处动态绑定的提示信息！
+              鼠标悬停几秒钟查看此处动态绑定的提示信息！
     </span>
     <div>
       1、<p v-if="seen">现在你看到我了</p>
@@ -31,8 +38,35 @@
     </ol>
     <button v-on:click="reverseMessage">逆转消息</button>
   </div>
-  
+  <div id="app-7">
+  <ol>
+    <!--
+      现在我们为每个 todo-item 提供 todo 对象
+      todo 对象是变量，即其内容可以是动态的。
+      我们也需要为每个组件提供一个“key”，晚些时候我们会做个解释。
+    -->
+    <todo-item
+      v-for="item in groceryList"
+      v-bind:todo="item"
+      v-bind:key="item.id">
+    </todo-item>
+  </ol>
+</div>
   <script type="text/javascript">
+Vue.component('todo-item', {
+  props: ['todo'],
+  template: '<li>{{ todo.text }}</li>'
+})
+var app7 = new Vue({
+  el: '#app-7',
+  data: {
+    groceryList: [
+      { id: 0, text: '蔬菜' },
+      { id: 1, text: '奶酪' },
+      { id: 2, text: '随便其他什么人吃的东西' }
+    ]
+  }
+})
     var app = new Vue({
       el:"#app",
       data: {
