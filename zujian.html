@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    
+    <title></title>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/vue/2.1.3/vue.js"></script>
+</head>
+<body>
+
+<div id="app">
+     <p>{{ message }}</p>
+    <button v-on:click="warn('Form cannot be submitted yet.', $event)">
+      Submit
+    </button>
+</div>
+
+<script type="text/javascript">
+    
+  var app = new Vue({
+      el: '#app',
+      data: {
+          message : "xuxiao is boy" 
+      },
+       beforeCreate: function () {
+                console.group('beforeCreate 创建前状态===============》');
+               console.log("%c%s", "color:red" , "el     : " + this.$el); //undefined
+               console.log("%c%s", "color:red","data   : " + this.$data); //undefined 
+               console.log("%c%s", "color:red","message: " + this.message)  
+        },
+        created: function () {
+            console.group('created 创建完毕状态===============》');
+            console.log("%c%s", "color:red","el     : " + this.$el); //undefined
+               console.log("%c%s", "color:red","data   : " + this.$data); //已被初始化 
+               console.log("%c%s", "color:red","message: " + this.message); //已被初始化
+        },
+        beforeMount: function () {
+            console.group('beforeMount 挂载前状态===============》');
+            console.log("%c%s", "color:red","el     : " + (this.$el)); //已被初始化
+            console.log(this.$el);
+               console.log("%c%s", "color:red","data   : " + this.$data); //已被初始化  
+               console.log("%c%s", "color:red","message: " + this.message); //已被初始化  
+        },
+        mounted: function () {
+            console.group('mounted 挂载结束状态===============》');
+            console.log("%c%s", "color:red","el     : " + this.$el); //已被初始化
+            console.log(this.$el);    
+               console.log("%c%s", "color:red","data   : " + this.$data); //已被初始化
+               console.log("%c%s", "color:red","message: " + this.message); //已被初始化 
+        },
+        beforeUpdate: function () {
+            console.group('beforeUpdate 更新前状态===============》');
+            console.log("%c%s", "color:red","el     : " + this.$el);
+            console.log(this.$el);   
+               console.log("%c%s", "color:red","data   : " + this.$data); 
+               console.log("%c%s", "color:red","message: " + this.message); 
+        },
+        updated: function () {
+            console.group('updated 更新完成状态===============》');
+            console.log("%c%s", "color:red","el     : " + this.$el);
+            console.log(this.$el); 
+               console.log("%c%s", "color:red","data   : " + this.$data); 
+               console.log("%c%s", "color:red","message: " + this.message); 
+        },
+        beforeDestroy: function () {
+            console.group('beforeDestroy 销毁前状态===============》');
+            console.log("%c%s", "color:red","el     : " + this.$el);
+            console.log(this.$el);    
+               console.log("%c%s", "color:red","data   : " + this.$data); 
+               console.log("%c%s", "color:red","message: " + this.message); 
+        },
+        destroyed: function () {
+            console.group('destroyed 销毁完成状态===============》');
+            console.log("%c%s", "color:red","el     : " + this.$el);
+            console.log(this.$el);  
+               console.log("%c%s", "color:red","data   : " + this.$data); 
+               console.log("%c%s", "color:red","message: " + this.message)
+        },
+        methods: {
+          warn: function (message, event) {
+            // 现在我们可以访问原生事件对象
+            if (event) event.preventDefault()
+            alert(message)
+          }
+        }
+    })
+</script>
+<div id="watch-example">
+  <p>
+    Ask a yes/no question:
+    <input v-model="question">
+  </p>
+  <p>{{ answer }}</p>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/axios@0.12.0/dist/axios.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/lodash@4.13.1/lodash.min.js"></script>
+<script>
+var watchExampleVM = new Vue({
+  el: '#watch-example',
+  data: {
+    question: '',
+    answer: 'I cannot give you an answer until you ask a question!'
+  },
+  watch: {
+    // 如果 question 发生改变，这个函数就会运行
+    question: function (newQuestion) {
+      this.answer = 'Waiting for you to stop typing...'
+      this.getAnswer()
+    }
+  },
+  methods: {
+    // _.debounce 是一个通过 lodash 限制操作频率的函数。
+    // 在这个例子中，我们希望限制访问 yesno.wtf/api 的频率
+    // ajax 请求直到用户输入完毕才会发出
+    // 学习更多关于 _.debounce function (and its cousin
+    // _.throttle), 参考: https://lodash.com/docs#debounce
+    getAnswer: _.debounce(
+      function () {
+        if (this.question.indexOf('?') === -1) {
+          this.answer = 'Questions usually contain a question mark. ;-)'
+          return
+        }
+        this.answer = 'Thinking...'
+        var vm = this
+        axios.get('https://yesno.wtf/api')
+          .then(function (response) {
+            vm.answer = _.capitalize(response.data.answer)
+          })
+          .catch(function (error) {
+            vm.answer = 'Error! Could not reach the API. ' + error
+          })
+      },
+      // 这是我们为用户停止输入等待的毫秒数
+      500
+    )
+  }
+})
+</script>
+<div id="addNew">
+    <input type="text" name="newItemInput" v-model="newData">
+    <button @click="addNewItem(newData)">新增</button>
+</div>
+<div id="showPanel">
+    <h2>您的待办事项：</h2>
+    <ol>
+        <li v-for="(item, index) in currentItems">
+            <span @click="changeEditale(item)" v-show="!item.editable">{{ item.data }}</span>
+            <span v-show="item.editable"><input type="text" :name="index" v-model="item.data"><span @click="changeEditale(item)">确定</span></span>
+            <span class="remove" @click="remove(index)">X</span>
+        </li>
+    </ol>
+    
+</div>
+
+<script>
+var addNew = new Vue({
+    el: '#addNew',
+    data: {
+        todoItems: [],
+        newData: ''
+    },
+    methods: {
+        addNewItem: function() {
+            this.todoItems.push(this.newData);
+            showItems.$emit('addNew', this.newData); 
+            console.log(showItems.currentItems)
+        }
+    }
+});
+var showItems = new Vue({
+    el: '#showPanel',
+    data: {
+        currentItems: []
+    },
+    methods: {
+        remove: function(index) {
+          console.log(index)
+            this.currentItems.splice(index, 1);
+            addNew.$emit('remove', index);
+        },
+        changeEditale: function(item) {
+          console.log(item)
+            item.editable = !item.editable;
+        }
+    }
+});
+showItems.$on('addNew', function(newData) {
+    var item = {
+        data: newData,
+        editable: false
+    };
+    this.currentItems.push(item);
+});
+addNew.$on('remove', function(index) {
+    this.todoItems.splice(index, 1);
+});
+</script>
+
+<!--作者：小前seant
+链接：http://www.jianshu.com/p/ee8e1eff9591
+來源：简书
+著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。-->
+</body>
+</html>
