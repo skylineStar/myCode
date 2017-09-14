@@ -201,5 +201,29 @@ addNew.$on('remove', function(index) {
 链接：http://www.jianshu.com/p/ee8e1eff9591
 來源：简书
 著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。-->
+<div id="app1">
+    <div>
+      <input v-model="parentMsg">
+      <br>
+      <child v-bind:message="parentMsg"></child>
+    </div>
+</div>
+ 
+<script>
+// 注册
+Vue.component('child', {
+  // 声明 props
+  props: ['message'],
+  // 同样也可以在 vm 实例中像 "this.message" 这样使用
+  template: '<h3>{{ message }}</h3>'
+})
+// 创建根实例
+new Vue({
+  el: '#app1',
+  data: {
+    parentMsg: '父组件内容'
+  }
+})
+</script>
 </body>
 </html>
