@@ -79,16 +79,21 @@
       <input v-model.lazy="msg" >
       <p>{{msg}}</p>
       <h3>.number修饰符</h3> 
-      <input v-model.number="age" type="number">
+      <input v-model.number="age" type="number" :class='{ddd:a}' @change=''>
       <p>{{age}}</p>
+      <h3>trim</h3>
+      <input v-model.trim="name" type="text" :class='{ddd:a}' @change=''>
+      <p>{{name}}</p>
     </div>
     <script type="text/javascript">
     	var hello =  new Vue({
         el: '#example-6',
         data: {
+          a:true,
           selected: [],
           msg:'',
-          age:''
+          age:'',
+          name:''
         }
       })
     </script>
