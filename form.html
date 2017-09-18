@@ -3,7 +3,6 @@
 	<head>
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
-    
 		<title>vue表单输入</title>
 		<script type="text/javascript" src="https://cdn.jsdelivr.net/vue/2.1.3/vue.js"></script>
 	</head>
@@ -66,7 +65,7 @@
         }
       })
     </script>
-    <!--多选列表-->
+    <h3>多选列表</h3>
     <div id="example-6">
       <select v-model="selected" multiple style="width: 50px">
         <option>A</option>
@@ -75,14 +74,22 @@
       </select>
       <br>
       <span>Selected: {{ selected }}</span>
-      <h3>在 "change" 而不是 "input" 事件中更新</h3> 
-      <input v-model.lazy="msg" >
-      <p>{{msg}}</p>
-      <h3>.number修饰符</h3> 
-      <input v-model.number="age" type="number" :class='{ddd:a}' @change=''>
-      <p>{{age}}</p>
-      <h3>trim</h3>
-      <input v-model.trim="name" type="text" :class='{ddd:a}' @change=''>
+      <h3>.lazy修饰符 在 "change" 而不是 "input" 事件中更新</h3> 
+      <h5>无.lazy修饰符</h5> 
+        <input v-model="msg" >
+        <p>{{msg}}</p>
+      <h5>有.lazy修饰符</h5> 
+        <input v-model.lazy="msg1" >
+        <p>{{msg1}}</p>
+      <h3>.number修饰符 可更改输入值返回类型为number</h3> 
+      <h5>有.number修饰符</h5>
+        <input v-model.number="age" type="text" placeholder='请输入数字' @change='isType(age)'>
+        <p>{{age}}</p>
+      <h5>无.number修饰符</h5>
+        <input v-model="age1" type="text" placeholder='请输入数字' @change='isType(age1)'>
+        <p>{{age1}}</p>
+      <h3>.trim修饰符 去除输入值两边的空格</h3>
+      <input v-model.trim="name" type="text" :class='{ddd:a}' @change='isType(name)'>
       <p>{{name}}</p>
     </div>
     <script type="text/javascript">
@@ -92,8 +99,16 @@
           a:true,
           selected: [],
           msg:'',
+          msg1:'',
           age:'',
+          age1:'',
           name:''
+        },
+        methods: {
+          // 检测输入值类型
+          isType:function(curVal){
+            alert(curVal+"类型"+typeof(curVal))
+          }
         }
       })
     </script>
