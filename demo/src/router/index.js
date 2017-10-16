@@ -17,6 +17,6 @@ export default new Router({
       path: '/test/mintDemo',
       name: 'mintDemo',
       component: mintDemo
-    }
+    },
   ]
 })
