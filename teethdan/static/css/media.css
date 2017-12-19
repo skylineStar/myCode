@@ -1,0 +1,61 @@
+/* Smartphones (portrait and landscape) ----------- */
+@media only screen 
+and (min-device-width : 320px) and (max-device-width : 480px) {
+  /* Styles */
+}
+
+/* Smartphones (landscape) ----------- */
+@media only screen and (min-width : 321px) {
+  html{font-size: 16px}
+}
+
+/* Smartphones (portrait) ----------- */
+@media only screen and (max-width : 320px) {
+  html{font-size: 16px}
+}
+
+/* iPads (portrait and landscape) ----------- */
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
+  html{font-size: 16px}
+}
+
+/* iPads (landscape) ----------- */
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : landscape) {
+  html{font-size: 16px}
+}
+
+/* iPads (portrait) ----------- */
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : portrait) {
+  html{font-size: 16px}
+}
+
+/* Desktops and laptops ----------- */
+@media only screen and (min-width : 1224px) {
+  html{font-size: 16px}
+}
+
+/* Large screens ----------- */
+@media only screen and (min-width : 1824px) {
+  html{font-size: 16px}
+}
+
+/* Android ----------- */
+@media only screen and (-webkit-min-device-pixel-ratio:1.5), only screen and (min-device-pixel-ratio:1.5) {
+  html{font-size: 16px}
+}
+/* iPhone 4 ----------- */
+@media only screen and (-webkit-min-device-pixel-ratio:2), only screen and (min-device-pixel-ratio:2) {
+  html{font-size: 16px;}
+}
+/* Android ----------- */
+@media only screen and (-webkit-min-device-pixel-ratio:2) and (min-device-width : 350px) and (max-device-width : 380px), only screen and (min-device-pixel-ratio:2) and (min-device-width : 350px) and (max-device-width : 380px) {
+  html{font-size: 18px;}
+}
+/* Android ----------- */
+@media only screen and (-webkit-min-device-pixel-ratio:3), only screen and (min-device-pixel-ratio:3) {
+  html{font-size: 18px;}
+}
+/* iPhone 6P ----------- */
+@media only screen and (-webkit-min-device-pixel-ratio:3) and (min-device-width : 400px) and (max-device-width : 450px), only screen and (min-device-pixel-ratio:3) and (min-device-width : 400px) and (max-device-width : 450px) {
+  html{font-size: 20px;}
+}

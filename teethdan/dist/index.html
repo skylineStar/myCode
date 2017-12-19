@@ -1,0 +1,20 @@
+<!DOCTYPE html><html><head><base href=""><meta charset=utf-8><meta name=viewport id=meta content="width=device-width,initial-scale=1,user-scalable=no,minimum-scale=1,maximum-scale=1"><meta name=apple-mobile-web-app-capable content=yes><meta name=format-detection content="telephone=no"><title></title><link rel=stylesheet type=text/css href=./static/css/reset.css><link rel=stylesheet type=text/css href=./static/css/media.css><script src=./static/js/Mobile_H5_SDK_Release_3.1.1.js td-appid=E6AA409FE6C11F972000152A3006216A></script><link href=static/css/app.88f12b37f93676906157c6f5d6c9c290.css rel=stylesheet></head><body><div id=app></div><script type=text/javascript src=static/js/manifest.7725df662c2169d5f85e.js></script><script type=text/javascript src=static/js/vendor.db20cc2920e4cbdee3e0.js></script><script type=text/javascript src=static/js/app.6ff1886425e9ca5d82ca.js></script></body><script src="" type=text/javascript charset=utf-8>document.getElementsByTagName('base').href="/webApp/"
+  	/**
+	 * 在微信上隐藏地址 方法1隐藏
+	 */
+	function hideaddress (){
+	  if (typeof WeixinJSBridge == "undefined"){
+	    if( document.addEventListener ){
+	         document.addEventListener('WeixinJSBridgeReady', onBridgeReady, false);
+	    }else if (document.attachEvent){
+	         document.attachEvent('WeixinJSBridgeReady', onBridgeReady); 
+	         document.attachEvent('onWeixinJSBridgeReady', onBridgeReady);
+	    }
+	  }else onBridgeReady();
+	}
+	var onBridgeReady = function (){
+	   WeixinJSBridge.call('hideOptionMenu');
+	}
+	hideaddress();
+	TDAPP.onEvent("_td_account",document.getElementsByName('title'));
+	TDAPP.send();</script></html>

@@ -1,0 +1,934 @@
+/*齿科券预约服务 样式*/
+*{margin: 0;padding: 0;}
+ol,ul{list-style: none;}
+body{background-color:#f3f3f3}
+.radioList,.checkTime{
+  background-color:#FFFFFF;
+}
+body{height: 100%;}
+#app{height: 100%;}
+.left{
+    float: left;
+  }
+  .right{
+    float: right;
+  }
+  .clear{
+    overflow: hidden;
+    clear: both;
+  }
+  /*居中toast样式*/
+   .mToast{
+    font-size: .72rem;
+    width:100%;
+  }
+  /*顶部toast样式*/
+  .topToast{
+    height: 1.08rem;
+    /*line-height: 1.08rem;*/
+    background-color:#fe6e2e ;
+    color: #FFFFFF;
+    text-align: center;
+    font-size: .67rem;
+  }
+  /*============空白页样式======start===========*/
+  .whiteList{
+  display: none;
+  width: 100%;
+  margin-bottom: 10px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+}
+.whiteList img{
+    display: block;
+    margin: auto;
+    margin-top: 40%;
+    width: 42%;
+    
+  }
+.whitetext{
+  font-size: 1rem;
+  height: 2.5rem;
+  display: block;
+  width: 100%;
+  margin: auto;
+  margin-top: 2rem;
+  margin-bottom: 75%;
+  vertical-align: bottom;
+  color: #999;
+}
+ /*================空白页样式=====end=============*/
+  /*以上为公用样式*/
+.mint-indexlist-navitem {
+    color: #3e78b4;
+  }
+  .mint-indexsection-index{
+    background-color: #f3f3f3!important;
+  }
+  .mint-indexlist-content {
+    margin: 0 !important;
+}
+.mint-indexlist-nav{
+  width: 1.36rem;
+  background: none!important; 
+  border-left: 0!important; 
+  padding-right: .33rem;
+}
+.mint-cell-text {
+    vertical-align: middle;
+    display: inline-block;
+    width: 5rem;
+}
+/*关闭按钮*/
+.close{
+    position: absolute;
+    top: .67rem;
+    left: .83rem;
+    display: block;
+    width: 1rem;
+    height: 1rem;
+    background: url(../images/order/order_close.png) no-repeat 0 0;
+    background-size: 100%;
+  }
+  /*Place页面样式=====*/
+ .Place{
+  background-color: #f3f3f3;
+  color: #4e4e4e;
+  font-size: .72rem;
+}
+
+/*以上为公用样式*/
+  .localtitle{
+    padding: .83rem;
+  }
+  .local-r{
+    color: #9a9a9a;
+  }
+  /*向上方向箭头*/
+  .toup{
+    display: inline-block;
+    width: .67rem;
+    height: .67rem;
+    background: url(../images/order/order_icons_01.png) no-repeat 0 0;
+    background-size: 100%;
+    background-position: 0 3px;
+    margin-left: .45rem;
+  }
+  .todown{
+    transform: rotate(180deg);
+    -ms-transform: rotate(180deg);             /* IE 9 */
+    -webkit-transform: rotate(180deg);      /* Safari and Chrome */
+    -o-transform: rotate(180deg);              /* Opera */
+    -moz-transform: rotate(180deg);         /* Firefox */
+  }
+  /*区*/
+ .localarea{
+   padding: .83rem .83rem 0 .83rem;
+   width: 100%;
+ }
+  .district{
+    display: block;
+    text-align: center;
+    width: 26%;
+    height: 1.89rem;
+    white-space:nowrap;overflow:hidden;text-overflow:ellipsis;
+    line-height: 1.89rem;
+    background-color: #FFFFFF;
+    border: 1px solid #cfcfcf;
+    border-radius: 2px;
+    font-size: .72rem;
+    margin-right: .61rem;
+    margin-bottom: .83rem;
+    
+  }
+  .check{
+    background-color: #cfcfcf;
+  }
+  /*索引列表*/
+ .mint-indexlist-nav{
+   position: fixed;
+   right: 0;
+ }
+   /*城市列表样式===start===*/
+
+.indexlist-bar {
+    width: 9.5%;
+    position: fixed;
+    height: 69%;
+    z-index: 10;
+    right: 0px;
+    top: 10%;
+    -webkit-transition: .2s;
+}
+.indexlist-bar a {
+    display: block;
+    text-align: center;
+    font-size: .61rem;
+    padding: .1rem 0;
+    margin: 0px;
+    line-height: .83rem;
+    color: #5c9edc!important;
+}
+.indexlist-bar.active {
+  background-color: rgb(200,200,200);
+}
+.indexlist-bar.active a {
+  color: #333;
+}
+.indexlist-bar.active a.active {
+  color: #007aff;
+}
+.mui-content-bj{
+  background: #ffffff;
+}
+.cityListArea{
+  width: 100%;
+  height: auto;
+  padding-bottom: 3rem;
+}
+  .cityListAZ{
+    width: 100%;
+    height: auto;
+  }
+  .cityListAZ ul,{
+    width: 100%;
+    height: 100%;
+  }
+  .citiBlocks{
+    width: 100%;
+    height: auto;
+  }
+  .citiBlocks li{
+    background: #ffffff;
+    font-size: .89rem;
+    width:100%;
+    height: 36px;
+    line-height: 36px;
+    text-align: left;
+    float: left;
+    display: inline-block;
+    border-bottom: solid 1px #eaeaea;
+    border-radius: 3px;
+    padding-left: 3%; 
+    padding-right: 3%; 
+  }
+    .indexlist-index{
+     background-color: #f3f3f3!important;
+  }
+  .cityChecked{
+    color: #5c9edc!important;
+  }
+    /*城市列表样式====end====*/
+  /*Place页面样式=====end======================*/
+ /*checkStation页面样式=========*/
+/*引用的搜索框=========*/
+  .cancelbtn{
+    color: #4E4E4E;
+    position: absolute;
+    right: 1.5rem;
+    top: .9rem;
+    font-size: 14px;
+    display: none;
+  }
+  .modal{
+    width: 100%;
+    background:rgba(0, 0, 0, 0.8);
+    background-color: #f3f3f3;
+    display: none;
+    position: absolute;
+    top: 2.7rem;
+    z-index: 100;
+  }
+  .histrybox{
+    width: 100%;
+    
+    background: #fff;
+    position: relative;
+  }
+  h2.histitle {
+    height: 2rem;
+    padding: .78rem 2rem 0;
+    margin-bottom: .83rem;
+    color: #4E4E4E;
+    font-size: .78rem;
+  }
+  
+  .clearbtn {
+    /*position: absolute;*/
+    bottom: 0;
+    padding: .83rem;
+    height: 2.44rem;
+    /*line-height: 2.44rem;*/
+    color: #4e4e4e;
+    font-size: .83rem;
+
+}
+  .searchList{
+    /*background-color: #FFFFFF;*/
+    width: 100%;
+    min-height: 4rem;
+    /*height: 100%;*/
+    /*position: absolute;*/
+    /*top: 2rem;*/
+    z-index: 100;
+    margin-left:.833rem;
+    padding-left:.98rem;
+    box-sizing: border-box;
+    border-bottom: 1px solid #f3f3f3;
+  }
+
+  .searchList .keywords{
+    /*height: 1.8rem;*/
+    background-color: #f3f3f3;
+    border-radius: 2px;
+    /*width: 100%;*/
+    line-height: 1.8rem;
+    font-size: .67rem;
+    color: #4e4e4e;
+    display: inline-block;
+    border: 1px solid #eee;
+    padding: 0 .94rem;
+    margin: 0 .55rem .83rem 0;
+  }
+  .notresult{
+    display: block;
+    width: 100%;
+    padding: .83rem .67rem;
+    font-size: .72rem;
+    color: #333;
+    line-height: 1.5rem;
+  }
+/*引用的搜索框=====end=================*/
+/*搜索框*/
+  .searchbox{
+    display: inline-block;
+    width: 68%;
+    position: relative;
+    padding: .5rem 0;
+  }
+  #searchtext{
+    display: inline-block;
+    width: 100%;
+    height: 1.67rem;
+    line-height: 1.67rem;
+    vertical-align: middle;
+    /*box-sizing: border-box;*/
+    margin: 0;
+    background-color: #fff;
+    font-size: .67rem;
+    text-align: left;
+    border-radius: 2px;
+    /*padding: .5rem 1.4rem;*/
+   padding: 0rem 1.4rem;
+    border: 1px solid #e7e7e7;
+  }
+  #searchtext::-webkit-input-placeholder{
+    color: #a9a9a9;
+    font-size: .72rem;
+    line-height: 1.67rem;
+  }
+  .searchicon{
+    display: block;
+    width: 13px;
+    height: 13px;
+    background: url(../images/order/order_search.png) no-repeat 0 0;
+    background-size: 100%;
+    position: absolute;
+    top: 1rem;
+    left: .9rem;
+  }
+  .searchbox .searchicon{
+    left: .5rem;
+  }
+  .hisicon{
+    position: absolute;
+    top: .8rem;
+    left: .9rem;
+  }
+  .stationbox{
+    min-height: 2.25rem;
+    background-color: #f3f3f3;
+  }
+  .stationli{
+    min-height: 5rem;
+    margin-left: .83rem;
+    border-bottom: 1px solid #ececec;
+  }
+  .checkCity{
+    display: inline-block;
+    font-size: .83rem;
+    color: #2777b6;
+    width: 20%;
+    padding: .83rem 0 .67rem .83rem;
+    margin-right: .83rem;
+    box-sizing: border-box;
+    white-space:nowrap;overflow:hidden;text-overflow:ellipsis;
+  }
+.radiobtn{
+  float: left;
+  width: 1rem;
+      min-height: 5rem;
+  margin-right: .67rem;
+  background: url(../images/order/order_no.png) no-repeat 0 0;
+  background-size: 100%;
+  background-position: 0 50%;
+}
+.checkRadio{
+  background: url(../images/order/order_yes.png) no-repeat 0 0;
+  background-size: 100%;
+  background-position: 0 50%;
+}
+.storeInfo{
+  float: left;
+  width: 60%;
+  height: 100%;
+  color: #4e4e4e;
+  font-size: .83rem;
+  padding: .55rem 0 .83rem;
+}
+.storeInfo h2{
+  margin-bottom: .83rem;
+  line-height: 1rem;
+}
+.orderStore{
+  width: 100%;
+}
+.noMargin{
+  margin: 0;
+}
+.store{
+  font-size: .67rem;
+  color: #9b9b9b;
+}
+.Addr{
+  margin-bottom: .55rem;
+  line-height: .89rem;
+  color: #9B9B9B;
+  font-size: .78rem;
+  /*white-space:nowrap;overflow:hidden;text-overflow:ellipsis;*/
+}
+.fNum{
+  color: #f58f01;
+}
+.navbox{
+  width: 28%;
+  height: 100%;
+  padding: .55rem 0;
+  text-align: right;
+}
+.distance{
+  height: 1.78rem;
+}
+.near{
+  display: inline-block;
+  /*min-height: .83rem;*/
+  /*width: 1.78rem;*/
+  padding: 3px;
+  background-color: #ff7f47;
+  color: #fff;
+  font-size: .61rem;
+  border-radius: 2px;
+  text-align: center;
+}
+.disNum{
+  font-size: .72rem;
+  color: #9b9b9b;
+}
+.numlen{
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 2rem;
+}
+.navicon img{
+  width: .83rem;
+  height: .83rem;
+}
+  .mint-loadmore-top{
+    text-align: center;
+    padding:0 45%;
+    font-size: .72rem;
+    color: #666;
+  }
+.mint-loadmore-bottom {
+    text-align: center;
+    height: 50px;
+    line-height: 50px;
+    font-size: .72rem!important;
+    color: #999!important;
+}
+/*checkStation页面样式========end==============*/
+/*toOrder页面样式============================*/
+.basemsg{
+    background-color: #f3f3f3;
+  }
+  .userMsg{
+    width: 100%;
+    background-color: #FFFFFF;
+  }
+   .toCheckTime{
+    margin: .55rem 0;
+  }
+  .timeInput{
+    width: 100%;
+   /*padding: 0 1rem;
+    font-size: .78rem;*/
+  }
+  /*提示语*/
+ .errtip{
+   display: none;
+   position: absolute;
+   top: 0;
+   width: 100%;
+   height: 1.1rem;
+   line-height: 1.1rem;
+   /*padding: 1px 0 2px 0;*/
+    background-color: #fe6e2e;
+    color: #FFFFFF;
+    text-align: center;
+    font-size: .5rem;
+ }
+ .errbtn{
+   display: none;
+   width: 1rem;
+   margin-right: 5px;
+ }
+ .errNum{
+   color:#fe6e2e ;
+ }
+ .tipsMsg{
+    background-color: #F8F8F8;
+    padding: 1.11rem .83rem .67rem;
+    font-size: .55rem;
+  }
+  .tipsMsg p{
+    margin: 0;
+    font-size: .72rem;
+    color: #9a9a9a;
+  }
+  .mint-field {
+    border-bottom: 1px solid #e5e5e5;
+    /*margin-left: .83rem;*/
+}
+.mint-field:last-child{
+  border: 0;
+}
+.tologin {
+    height: 2.77rem;
+    line-height: 2.77rem;
+    width: 100%;
+    text-align: right;
+    position: fixed;
+    z-index: 10;
+    right: 0;
+    top: 89%;
+  }
+  
+  .loginact {
+    width: 92%;
+    margin:auto;
+    height: 100%;
+    display: block;
+    font-size: 1rem;
+    text-align: center;
+    background-color: #f49e23;
+    color: #FFFFFF;
+    font-weight: 500;
+    border: 0;
+    border-radius: .22rem;
+  }
+  input[disabled='disabled']{
+    background-color: #ffd18d;
+  }
+  input::-webkit-input-placeholder{
+    font-size: .89rem;
+  }
+.toCheck {
+    /*display: block;
+    height: 100%;*/
+    color: #4E4E4E;
+    position: absolute;
+    left: 5rem;
+    /*top: 0!important;*/
+}
+/*.h_addr{
+  top: 0!important;
+}
+.toCheck input{
+  display: block;
+    height: 100%;
+}*/
+  .mint-datetime-confirm{
+    background:linear-gradient(to right,#56b0d8, #6f81e4);
+    color: #fff;
+  }
+  .mint-datetime-cancel {
+    color: #999;
+  }
+  .mint-cell-wrapper{
+    background: 0!important;
+  }
+.toOrder{
+  background-color: #f3f3f3;
+  height: 100%;
+}
+
+ 
+  /*已有信息字体颜色修改*/
+ .mint-cell-title {
+    color: #9a9a9a;
+    font-size: .89rem;
+}
+.mint-cell-value {
+    color: #d5d5d5;
+    font-size: .89rem;
+}
+  .mint-cell-allow-right::after {
+    border: solid 1px #a6a6a6;
+    border-bottom-width: 0;
+    border-left-width: 0;
+    content: " ";
+    top: 50%;
+    right: 20px;
+    position: absolute;
+    width: 7px;
+    height: 7px;
+    -webkit-transform: translateY(-50%) rotate(45deg);
+    transform: translateY(-50%) rotate(45deg);
+}
+
+/*已有信息字体颜色修改*/
+
+/*toOrder页面样式================end============*/
+/*checkTime页面样式===============================*/
+.mint-popup-bottom{
+    width: 100%;
+  }
+  .timeTitle{
+    position: relative;
+    height: 2.38rem;
+    width: 100%;
+    font-size: 1rem;
+    font-weight: 700;
+    text-align: center;
+    padding: .67rem .83rem;
+    border-bottom: 1px solid #d0cecd;
+  }
+  .timeli{
+    width: 30%;
+    margin-right: .55rem;
+    margin-bottom: .87rem;
+    position: relative;
+  }
+  .timeli button[disabled='disabled']{
+    /*background-color: red;*/
+  }
+  .timeli:nth-child(3){
+    margin-right: 0;
+  }
+  .timeli:nth-child(6){
+    margin-right: 0;
+  }
+  .timeli:nth-child(9){
+    margin-right: 0;
+  }
+  .timeli:nth-child(12){
+    margin-right: 0;
+  }
+  .timeList{
+    padding: 1.44rem 1.27rem;
+    padding-bottom: 1.44rem;
+  }
+  .mybtn{
+    background-color: #FFFFFF;
+    display: block;
+    outline: 0;
+    border: 0;
+    width: 100%;
+    height: 2.25rem;
+    font-size: .5rem;
+    /*border: 1px solid #d0cecd;*/
+    /*border-radius: 2px;*/
+    background: url(../images/order/order_btnbg1.png) no-repeat 0 0;
+    background-size: 100%;
+    padding: .2rem;
+    box-sizing: border-box;
+  }
+  .disableCss{
+    padding-bottom: 1rem;
+  }
+    /*已选时间*/
+ .timeChecked{
+   color: #ff9a01;
+   /*border: 1px solid #ff9a01;*/
+  background: url(../images/order/order_btnbg3.png) no-repeat 0 0;
+    background-size: 100%;
+  }
+  .timeNone{
+    color: #cccccc;
+    background: url(../images/order/order_btnbg2.png) no-repeat 0 0;
+    background-size: 100%;
+  } 
+  .Time_stepact{
+    font-size:  1rem;
+    height: 2.77rem;
+    line-height: 2.77rem;
+    width: 100%;
+    text-align: right;
+    background-color: #FFFFFF;
+    position: fixed;
+    z-index: 10;
+    right: 0;
+    bottom: 0;
+  }
+  .mToast{font-size: .72rem;width:100%;}
+  /*日历*/
+  .dateTable{width: 100%;background-color: #FFFFFF;}
+  .dateTable .datehead{
+    width:100%;
+    height: 2.22rem;
+    line-height: 2.22rem;
+    text-align: center;
+    font-size: .89rem;
+    font-weight: 700;
+    margin: 0;
+    color: #4E4E4E;
+    /*padding: .4rem 0;*/
+  }
+  .datebody{width: 100%;}
+  .datebody li{
+    float: left;
+    width: 2.83rem;
+    height: 2.44rem;
+    line-height: 2.44rem;
+    font-size: .889rem;
+    text-align: center;
+    vertical-align: middle;
+    margin-bottom: 2px;
+    border-bottom: 1px solid #f0f0f0;
+  }
+  
+  .clear{clear: both;overflow: hidden;}
+  .checkdate{
+    display: block;
+    float: left;
+    width: 1.83rem;
+    height: 1.83rem;
+    line-height: 1.83rem;
+    margin:.33rem .5rem;
+    border-radius: 50%;
+    text-align: center;
+    background-color: #ffa418;
+    /*border: 1px solid #ff9a01!important;*/
+    color: #FFFFFF!important;
+  }
+  .disable{color: #9a9a9a;position: relative;}
+  .unorderFlag {
+    font-size: .5rem;
+    color: #9a9a9a;
+    width: 100%;
+    text-align: center;
+    position: absolute;
+    bottom: 0;
+    /*left: .5rem;*/
+    height: .78rem;
+    line-height:.78rem;
+  }
+  .unTimeFlag{
+    font-size: .5rem;
+    color: #cccccc;
+    width: 100%;
+    text-align: center;
+    position: absolute;
+    bottom: 0;
+    /*left: .5rem;*/
+    height: .78rem;
+    line-height: 1.1rem;
+  }
+  .able{color: #4e4e4e;}
+  .curdate{color: #cbcbcb;position: relative;}
+  /*.curdate:after{
+    content: '';
+    display: block;
+    width: 5px;
+    height: 5px;
+    background-color: #FF5300;
+    border-radius: 50%;
+    position: absolute;
+    bottom: 0;
+    left: 45%;
+  }*/
+  /*日历===end====*/
+ .backstep a{color: #666666;}
+/*checkTime页面样式==============end=================*/
+.toPage{
+  padding-top: 30%;
+}
+.showUrl{
+  padding: 1rem;
+  background-color: #FFFFFF;
+  word-wrap: break-word;
+}
+.serve{
+  padding:.67rem;
+  background-color: #FFFFFF;
+}
+.icon{display:inline-block;width:1rem;height:1rem;margin-right:.5rem;vertical-align:middle;background:url(../../assets/images/order/icond03.png) no-repeat 0 0;background-size:100%;background-position:0 -1px}
+i.check{background:url(../../assets/images/order/icond02.png) no-repeat 0 0;background-size:100%;background-position:0 -1px}
+.head_week{
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content:center;
+    width:100%;
+    /*padding: 0 .5rem;*/
+    background-color: #fca929;
+    margin-bottom: .5rem;
+  }
+  .head_week .week{
+    color: #FFFFFF;
+    display: inline-block;
+    width: 12.5%;
+    text-align: center;
+    height: 30px;
+    line-height: 30px;
+    font-size: .67rem;
+    font-weight: 400;
+    
+  }
+  .mo{
+    color:#fdcf8e!important;
+  }
+  .monbody{
+    width: 100%;
+    display: block;
+  }
+  .foucusbox{width:100%;padding-left:.83rem}
+  .foucusicon{position: absolute;top: 1rem;left: 1.2rem!important}
+  .foucusinput{width:80%}
+.minthg{position: initial;}
+.minthg:last-child{border-bottom: 1px solid #D9D9D9;background-image: initial;}
+.lright{float: right; width: 76%;position: relative;}
+.left{float: left;}
+.toCheck{position: initial;}
+.mint-cell-text.mintwidth{width: 3.89rem;}
+.arror{
+  position: absolute;
+  top:40%;
+  right:-1rem;
+}
+.mintpadding{padding: 0rem;}
+.mintflex .mint-cell-title{flex: initial;-webkit-box-flex: initial;}
+.h_addr {padding: 0 .5rem;}
+/*wk*/
+.fs089{
+  font-size: 0.89rem;
+}
+.c9a{
+  color:#9a9a9a;
+}
+.toOrder .fs078{
+  font-size: 0.78rem;
+}
+.toOrder .mint-cell-wrapper{
+  padding: 0 0.83rem;
+}
+.toHos {
+    position: absolute;
+    left: 6rem;
+}
+.menzh{
+  padding: 0.84rem 0.83rem;
+  min-height: 4rem;
+}
+.lineh1{
+  line-height: 1.2rem;
+  margin-bottom: 0.56rem;
+  padding-right: .83rem;
+}
+.menzh .lineh2{
+  line-height: 1rem;
+  margin-bottom: 0.83rem;
+  padding-right: .83rem;
+}
+.mint-field .mint-cell-title{width: 5rem;}
+.c6e{
+  color: #fe6e2e;
+}
+.c4e{
+  color: #4e4e4e;
+}
+.phc.c6e{
+  color: #fe6e2e;
+}
+.mar1{padding: 0.95rem 0.83rem 0.8rem; }
+ .localarea{ padding: 0rem .83rem 0 .83rem;}
+   .localarea{
+   padding: 0rem .83rem 0 .83rem;}
+.district1{width: 26.6%;border-radius: 5px;margin-right: 0.56rem;margin-bottom: 0.83rem;}
+.cityListArea .mar3{padding-bottom: 0.95rem;}
+.citiBlocks1 li.indexlist-index{line-height: 1.78rem;height: 1.78rem;}
+.citiBlocks1 li{line-height: 2.45rem;height: 2.45rem;padding-left: 0.83rem;}
+/*2017.10.28*/
+.searchList li{
+    width: 100%;
+    line-height: 1.8rem;
+    font-size: .67rem;
+    color: #333;
+    border-bottom: 0;
+    padding-left: 0;
+  }
+  .toOrder  .mint-field {
+    margin-left: 0rem;
+}
+.padd02{padding: 0.2rem 0;}
+.padd_v{padding-top: 0.2rem;padding-bottom: 0.2rem;}
+.padd083{padding-left: 0.83rem;}
+.inputbox #searchtext{ -webkit-appearance : none ;   /*解决iphone safari上的圆角问题*/      -webkit-user-select:none; ime-mode:disabled;-webkit-touch-callout:none;}
+.storebox{
+  padding-left:  .83rem;
+  background-color: #FFFFFF;
+  display: flex;
+  flex-direction: row;
+}
+.new_store{
+  width: 100%;
+  /*min-height: 2.44rem;*/
+  display: flex;
+  border-bottom: 1px solid #e7e7e7;
+}
+.store_title {
+    flex-grow: 1;
+    
+    width: 5rem;
+    font-size: .89rem;
+    color: #9a9a9a;
+    line-height: 2.44rem;
+}
+.show_store {
+    flex-grow: 2;
+    display: flex;
+    flex-direction:column;
+    flex-wrap:wrap;
+    padding-left: 1.38rem;
+    width: 100%;
+    font-size: .89rem;
+    min-height: 2.44rem;
+}
+span.s_name {
+    font-size: .89rem;
+    color: #4e4e4e;
+    line-height: 1.5;
+    padding-top: .61rem;
+    margin-bottom: .14rem;
+}
+span.s_addr {
+    font-size: .78rem;
+    line-height: 1.5;
+    margin-bottom: .63rem;
+    color: #9a9a9a;
+}
+.r_icon{
+  
+}

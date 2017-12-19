@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    
+		<title>mint-UI实例</title>
+		<!-- 引入样式 -->
+    <link rel="stylesheet" href="https://unpkg.com/mint-ui/lib/style.css">
+    <!-- 引入组件库 -->
+    <!--<script src="https://unpkg.com/mint-ui/lib/index.js"></script>-->
+    <!--国内bootCDN-->
+    <!--<script src="https://cdn.bootcss.com/axios/0.16.0/axios.min.js"></script>-->
+	</head>
+	<body>
+	  <div id="app">
+      <mt-button @click="toastClick">toast按钮</mt-button>
+    </div>
+	</body>
+	 <!-- 先引入 Vue -->
+  <script src="https://unpkg.com/vue/dist/vue.js"></script>
+  <!-- 引入组件库 -->
+  <script src="https://unpkg.com/mint-ui/lib/index.js"></script>
+  <script>
+    new Vue({
+      el: '#app',
+      methods: {
+        toastClick: function() {
+          this.$toast('Hello world!')
+        }
+      }
+    })
+  </script>
+</html>

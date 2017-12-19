@@ -1,6 +1,5 @@
 <template>
   <div class="hello">
-    <h1>{{ msg }}</h1>
     <h2>Essential Links</h2>
     <ul>
       <li><a href="https://vuejs.org" target="_blank">Core Docs</a></li>
@@ -19,19 +18,36 @@
     </ul>
     <ul class='router'>
       <li><a href="#/test/mintDemo" target="_blank">mint实例展示</a></li>
+      <li><a href="#/test/teeth" target="_blank">teeth项目实例展示</a></li>
+      <li><a href="#/test/order" target="_blank">order实例展示</a></li>
+      <li><a href="#/test/loadMore" target="_blank">loadMore实例展示</a></li>
+      <li><a href="#/test/upLoadImg" target="_blank">upLoadImg实例展示</a></li>
     </ul>
+    <div>
+      <h4>基于Vue.2X的html5上传图片组件</h4>
+      <div style="width: 100%;">
+        <uploader :src="upURL"></uploader>
+      </div>
+    </div>
     <!--<img src="~assets/logo.png">-->
   </div>
 </template>
 
 <script>
+	import { config_param } from '../assets/js/config_param'
+  import uploader from './test/upLoadImg.vue'
+  
 export default {
   name: 'hello',
   data () {
     return {
-      msg: 'Welcome to Your Vue.js App'
+      upURL:config_param.base_path+'/webApp/mpform/upload/ecmre'
     }
+  },
+  components: {
+    uploader
   }
+  
 }
 </script>
 
@@ -39,7 +55,8 @@ export default {
 <style scoped>
   .router a{
     color: #000;
-    font-size: 28px;
+    font-size: 20px;
+    line-height: 1.5;
     font-weight: 500;
   }
 h1, h2 {

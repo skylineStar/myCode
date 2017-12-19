@@ -4,3 +4,6 @@
 export const getMsg = (state, payload) => {
   state.msg = payload.msg;
 }
+export const getMsgc = (state, payload) => {
+  payload.msg = state.msg;
+}
