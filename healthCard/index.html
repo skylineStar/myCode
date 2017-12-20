@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+  	<meta name="viewport" id="meta" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+  	<meta name="apple-mobile-web-app-capable" content="yes">
+  	<meta name="format-detection" content="telephone=no" />
+    <title>青春版体检套餐</title>
+    <link rel="stylesheet" type="text/css" href="/static/css/reset.css"/>
+    <link rel="stylesheet" type="text/css" href="/static/css/media.css"/>
+    <link rel="stylesheet" type="text/css" href="/static/mui/mui.min.css"/>
+    
+  </head>
+  <body style="margin:0;">
+    <div id="app"></div>
+    <!-- built files will be auto injected -->
+  </body>
+  <!--<script type="text/javascript" src="static/flexible.js"></script>-->
+  <script src="" type="text/javascript" charset="utf-8">
+  var meta=document.getElementById('meta');
+  var popImg=document.getElementById('popImg');
+  console.log(meta)
+  console.log(popImg)
+  	if(window.location.href.indexOf('popImg')=='-1'){
+  		if(meta)return
+  		document.getElementById('meta').setAttribute('content',"width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0");  		
+  		document.getElementById('meta').setAttribute("id", "popImg")
+  	}else{//popImg 页面
+  		document.getElementById('meta').setAttribute("id", "popImg")
+  		document.getElementById('popImg').setAttribute('content',"width=device-width, initial-scale=1.0, user-scalable=yes, minimum-scale=1.0, maximum-scale=5.0");  		
+  	}
+  	/**
+ * 在微信上隐藏地址 方法1隐藏
+ */
+function hideaddress (){
+  if (typeof WeixinJSBridge == "undefined"){
+    if( document.addEventListener ){
+         document.addEventListener('WeixinJSBridgeReady', onBridgeReady, false);
+    }else if (document.attachEvent){
+         document.attachEvent('WeixinJSBridgeReady', onBridgeReady); 
+         document.attachEvent('onWeixinJSBridgeReady', onBridgeReady);
+    }
+  }else onBridgeReady();
+}
+var onBridgeReady = function (){
+   WeixinJSBridge.call('hideOptionMenu');
+}
+hideaddress();
+</script>
+</html>

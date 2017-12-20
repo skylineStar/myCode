@@ -1,0 +1,6 @@
+101000368杨晶的
+
+//oauth2   链接 购买流程
+https://open.weixin.qq.com/connect/oauth2/authorize?appid=wxdbbe2c84a6e68304&redirect_uri=http://wxpt-t.taikang.com/tkmap/wechat/oauth2/redirectuser/wxdbbe2c84a6e68304?other=aHR0cDovL3NhbGV0ZXN0Lnd4LnRremoudGFpa2FuZy5jb20vIy9ydW5EZXZQYWdlLw==&response_type=code&scope=snsapi_userinfo&state=redict&connect_redirect=1#wechat_redirect
+
+//oauth2   链接 产品流程

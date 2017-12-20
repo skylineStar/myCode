@@ -1,0 +1,388 @@
+ /*公共样式*/
+
+ p{
+   width: 100%;
+   color: #999;
+   line-height: 21px;
+ }
+ /*列表搜索表头*/
+
+ /*卡列表样式===start====*/
+.listbody{
+  padding:.833rem;
+  background-color: #f8f8f8;
+}
+/*卡列表圆孔样式*/
+   /*圆点样式==start==*/
+  .dotted:before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: inline-block;
+    width: 7px;
+    height: 100%;
+    background: url(../../assets/images/order/y.png) repeat-y -6px 0;
+    background-size: 13px 13px;
+    content: '';
+  }
+  .dotted {position: relative;}
+  .dotted:after {
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: inline-block;
+    width: 7px;
+    height: 100%;
+    background: url(../../assets/images/order/y.png) repeat-y 0 0;
+    background-size: 13px 13px;
+    content: '';
+  }
+  /*圆点样式==end==*/
+ /*mint 提示信息 */
+ .mToast{
+    font-size: .72rem;
+    width:100%;
+  }
+    /*mint 提示弹出框样式*/
+  .mint-msgbox-title {
+    font-size: 1rem;
+    font-weight: 700;
+    padding-bottom: .5rem;
+    color: #333;
+    border-bottom: 1px solid #cccccc;
+}
+.mint-msgbox-message {
+    color: #333!important;
+    text-align: left;
+    font-size: .667rem;
+    line-height: 1.5rem;
+}
+.mint-msgbox-cancel {
+    color: #666;
+    border-right: 1px solid #ddd;
+}
+.mint-msgbox-confirm {
+    color: #FFFFFF!important;
+    font-size: .833rem;
+    background: linear-gradient(to right,#56b0d8, #6f81e4);
+}
+/*提示框样式===end===*/
+  /*空白页样式*/
+  .whiteList{
+  display: block;
+  width: 100%;
+  margin-bottom: 10px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+}
+.whiteList img{
+    display: block;
+    margin: auto;
+    margin-top: 40%;
+    width: 42%;
+    
+  }
+.whitetext{
+  font-size: 1rem;
+  height: 2.5rem;
+  display: block;
+  width: 100%;
+  margin: auto;
+  margin-top: 2rem;
+  margin-bottom: 75%;
+  vertical-align: bottom;
+  color: #999;
+}
+  /*错误页样式*/
+  .errorList{
+  display: block;
+  width: 100%;
+  margin-bottom: 10px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+  background-color: #f8f8f8;
+}
+.errorList img{
+    display: block;
+    margin: auto;
+    margin-top: 40%;
+    width: 42%;
+    
+  }
+.errortext{
+  
+  font-size: 1rem;
+  height: 2.5rem;
+  display: block;
+  width: 100%;
+  margin: auto;
+  margin-top: 2rem;
+  margin-bottom: 75%;
+  vertical-align: bottom;
+  color: #999;
+}
+  /*公共样式===end===*/
+/*套餐列表===start====*/
+      .meallist{
+        margin-bottom: 40px;
+      }
+      .meallist{
+        width: 100%;
+        background-color: #FFFFFF;
+        padding: .833rem;
+      }
+      .mealitems .item{
+        padding-top: .67rem;
+        overflow: hidden;
+        background: url(../../assets/images/order/ss01.png) no-repeat 0 0 ;
+        background-position: right .9rem;
+        background-size: .67rem .389rem;
+        border-bottom: 1px solid #f1f1f1;
+        position: relative;
+      }
+      .mealitems .item a{
+        width: 95%;
+        overflow: hidden;
+        padding-bottom: .67rem;
+      }
+      .mealitems .item a.check span{
+        line-height: 1.2rem;
+      }
+      .mealitems .item.check{
+        background: url(../../assets/images/order/ss02.png) no-repeat 0 0 ;
+        background-position: right .9rem;
+        background-size: .67rem .38rem;
+      }
+      .mealitems .item .ordertitle{
+        display: block;
+        padding-left: 1.75rem;
+        background: url(../../assets/images/order/icond03.png) no-repeat 0 0;
+        background-size: 1rem;
+        background-position: 0 .2rem;
+        
+        font-size: .78rem;
+        color: #333333;
+      }
+      .mealitems .item:last-child{
+        border: 0;
+      }
+      
+      .iteminfo{
+        display: block;
+        border-top: 1px solid #f1f1f1;
+      }
+      .lasttip{
+        width: 100%;
+        
+        padding: .833rem;
+      }
+      .lasttip p{
+        font-size: .58rem;
+        width: 100%;
+        color: #999;
+      }
+      .iteminfo h5{
+        display: block;
+        font-size:.61rem;
+        margin-top: .83rem;
+      }
+      .detailtitle{
+        display: block;
+        line-height: 1.5rem;
+        font-size: .67rem;
+        color:#333;
+      }
+      .detailcontent{
+        font-size: .61rem;
+        height: 1rem;
+        line-height: 1rem;
+        color:#999999;
+        display: block;
+      }
+      .more{
+        text-decoration: underline;
+        color: #5c9edc;
+        font-size: .67rem;
+      }
+     /*套餐列表===end====*/
+/*vue中解决变量闪烁问题*/
+[v-cloak]{
+  display: none!important;
+}
+/*vue中解决变量闪烁问题===end===*/
+
+  /*步骤导航===start===*/
+  .stepnav{
+    width: 100%;
+    padding: .6rem 0;
+    background-color: #FFFFFF;
+    margin-bottom: .833rem;
+    position: relative;
+  }
+  .stepnav .txtnav{
+    float: left;
+    text-align: center;
+    width:25%;
+    color: #BBBBBB;
+    position: relative;
+  }
+  .txtnav:after{
+    content: '';
+    width: 100%;
+    display: inline-block;
+    height: 1px;
+    background-color:#BBBBBB;
+    position: absolute;
+    top: .5rem;
+    left: 52%;
+  }
+  /*mint 字体颜色设置*/
+ .mint-cell-title {
+   
+    font-size: .667rem;
+}
+.mint-cell-value {
+    
+    font-size: .667rem;
+}
+/*mint字体颜色设置===end===*/
+
+  .wi{
+    display: block;
+    width: 16px;
+    height: 16px;
+    margin: auto;
+    color: #ff5300;
+    box-sizing: border-box;
+    border: 1px solid #FFFFFF;
+    background-color: #bbbbbb;
+    border-radius: 50%;
+    position: relative;
+    top: 1px;
+    z-index: 0;
+  }
+  .ws{
+    display: block;
+    width: 18px;
+    height: 18px;
+    margin: auto;
+    line-height: 23px;
+    border-radius: 50%;
+    background-color: #FFFFFF;
+    position: relative;
+  }
+  .stepnav ul{
+    width: 100%;
+    overflow: auto;
+  }
+  
+  .stepnav .txtnav p {
+    vertical-align: bottom;
+    margin: 0;
+    width: 100%;
+    color: #999;
+    font-size: .66rem;
+}
+  .stepnav .txtnav .txt{
+    vertical-align: bottom;
+    margin: 0;
+    font-size: .66rem;
+  }
+  .ctxt{color: #5c9edc !important;}
+  .stepicon{
+    background-color: #5c9edc;
+  }
+  .ci{
+    content:'';
+    color: #5c9edc;
+    background-color: #5c9edc;
+  }
+  .stepnav .txtnav:last-child:after{
+    display: none;
+  }
+  .stepnav .txtnav:first-child:before{
+    display: none;
+  }
+  .stepnav .txtnav:last-child:after{
+    display: none;
+  }
+  .stepnav .txtnav:first-child:before{
+    display: none;
+  }
+/*步骤导航====end====*/
+/*底部登录按钮样式*/
+.bottom_btn,.tologin {
+    height: 2.77rem;
+    line-height: 2.77rem;
+    width: 100%;
+    text-align: right;
+    background-color: #FFFFFF;
+    position: fixed;
+    z-index: 10;
+    right: 0;
+    bottom: 0;
+}
+.loginact{
+  font-size: 1rem;
+  width: 100%;
+  display:block;
+  text-align: center;
+  color: #ffffff;
+}
+/*底部登录按钮==end====*/
+/*按钮渐变*/
+.btn-gradient{
+  background:linear-gradient(to right,#56b0d8, #6f81e4);
+}
+/*按钮渐变===end===*/
+/*公共颜色*/
+.bluebg{
+  background-color: #4dacd6;
+}
+.orangebg{
+  background-color: #ff9731;
+}
+/*公共颜色===end===*/
+   /*跳转按钮==start===*/
+  .stepact{
+  height: 2.77rem;
+  line-height: 2.77rem;
+  width: 100%;
+  text-align: right;
+  background-color: #FFFFFF;
+  position: fixed;
+  z-index: 10;
+  right: 0;
+  bottom: 0;
+  }
+  .backstep{
+    width: 50%;
+    float: left;
+    display:inline-block;
+    text-align: center;
+    background-color:#ffffff ;
+    color: #666666;
+  }
+  .next{
+    width: 50%;
+    display:inline-block;
+    text-align: center;
+    background-color: #ff5300;
+    color: #ffffff;
+  }
+  /*跳转按钮==end===*/
+ .tipsword p{
+   width: 100%;
+   font-size: .58rem;
+ }
+
+ .row3 p{
+   width: 100%;
+ }
+/*卡券列表====start===*/
+  
+/*卡券列表页面样式====end===*/

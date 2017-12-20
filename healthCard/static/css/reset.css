@@ -1,0 +1,76 @@
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  outline: none;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+a{
+	color:#333;
+}
+input[type=search] {
+    /*font-size: 16px;*/
+   font-size: .6rem;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    /* height: 34px; */
+    /*text-align: center;*/
+    border: 0;
+    border-radius: 6px;
+    height: 1.5rem;
+    /*background-color: rgba(0,0,0,.1);*/
+}
+input, select, textarea {
+    font-family:none;
+    font-size: .6rem;
+    	-webkit-tap-highlight-color: rgba(0,0,0,0);
+		-webkit-tap-highlight-color: transparent;
+}
+input[type=search]{
+	background-color:#fff;
+	color: #333;
+	border-radius: 0px;
+}
+html { height: 100%;overflow-x: hidden;}
+body { font-size: 62.5%; line-height: 1; font-family: "微软雅黑", Arial, Tahoma, sans-serif;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none; 
+		-webkit-tap-highlight-color: rgba(0,0,0,0);
+		-webkit-tap-highlight-color: transparent;
+    
+    }
+ input[type="button"], input[type="submit"], input[type="reset"] {-webkit-appearance: none;}
+
+textarea {-webkit-appearance: none;}  
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section { display: block; }
+ol, ul { list-style: none;}
+
+blockquote, q { quotes: none; }
+blockquote:before, blockquote:after, q:before, q:after { content: ''; content: none; }
+strong { font-weight: bold; } 
+
+table { border-collapse: collapse; border-spacing: 0; }
+img { border: 0; max-width: 100%; }
+
+a{ text-decoration:none}
+h1,h2,h3,h4,h5,h6{font-weight:normal; font-size:15px;}
+/*********************改变placeholder样式*********************/
+input::-webkit-input-placeholder{color:#d2d2d2; font-size:1.2em; } 
+input::-moz-placeholder {color:#d2d2d2;font-size:1.2em;} 
+input:-moz-placeholder {color:#d2d2d2;font-size:1.2em;}
+input:-ms-placeholder {color:#d2d2d2;font-size:1.2em;}
+a:focus,input:focus{ 
+    -webkit-tap-highlight-color:rgba(0,0,0,0); 
+    /*-webkit-user-modify:read-write-plaintext-only;*/ 
+}
+input{border:0;outline:none;/*去除蓝色边框*/}
+*:focus{outline:none;}

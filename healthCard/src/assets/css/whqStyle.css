@@ -1,0 +1,226 @@
+/*color & bjColor*/
+.fs11{font-size: 0.61rem !important;}
+.fs115{font-size: 0.64rem !important;}
+.fs12{font-size: 0.67rem !important;}
+.fs125{font-size: 0.7rem !important;}
+.fs13{font-size: 0.72rem !important;}
+.fs135{font-size: 0.75rem !important;}
+.fs14{font-size: 0.78rem !important;}
+.fs145{font-size: 0.81rem !important;}
+.fs15{font-size: 0.83rem !important;}
+.fs155{font-size: 0.86rem !important;}
+.fs16{font-size: 0.89rem!important;}
+.fs165{font-size: 0.92rem !important;}
+.blue{
+    color: #5c9edc !important;
+}
+.c333,.c333333{color: #333333;}
+.c666,.c666666{color: #666666;}
+.c999,.c999999{color: #999999;}
+.blueBj{
+    background: #5c9edc;
+}
+.f8f8f8{
+  background: #f8f8f8 !important;
+}
+.ffffff,.fff{
+  background: #ffffff !important;
+}
+.yahei{font-family: "Microsoft YaHei", 微软雅黑, "MicrosoftJhengHei", 华文细黑, STHeiti, MingLiu;}
+/*布局*/
+.clear{clear: both;}
+.none{display: none;width: 0;height: 0;}
+.positionBottom{position: absolute; left: 0; bottom: 0;}
+.positionBottomF{position: fixed; right: 0; bottom: 0;}
+.leftPanel{
+  display: block;
+  float: left;
+  width: 30%;
+  text-align: left;
+}
+.rightPanel{
+  display: inline-block;
+  float: right;
+  width: 70% !important;
+  /*text-align: right;*/
+}
+.pd_b0{padding-bottom: 0px;}
+.pd_t0{padding-top: 0px;}
+.pd_l0{padding-left: 0px;}
+.pd_r0{padding-right: 0px;}
+.btnBlock{
+  width: 100%;
+  height: 100%;
+  display: inline-block;
+  /*background-color: red;*/
+}
+.hide{
+  width: 0;
+  height: 0;
+  display: none;
+}
+.marginB49px{
+  margin-bottom: 49px;
+}
+/*倒三角*/
+.triangleDown{
+  display: inline-block;
+  width: 0;
+  height: 0;
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  border-top: 7px solid #1f1d1d;
+}
+/*【header】*/
+  /* html
+    <mt-header fixed title="关爱90后 体检套餐">
+      <router-link to="/runDevPage" slot="left">
+        <mt-button icon="back">返回</mt-button>
+      </router-link>
+      <mt-button icon="more" slot="right"></mt-button>
+    </mt-header>
+   */
+.mint-header-title{
+    font-size: 16.5px !important;
+}
+.mui-content{
+  background: #ffffff;
+  /*margin-top: 40px;*/
+}
+/*【footer + prePrice】*/
+/* html
+  <div class="buyPanel">
+    <div class="buyPanel_L">
+      <div class="heji"><span>合计：</span> <span class="blue">￥225</span></div>
+      <div class="prePrice"><s>￥450</s></div>
+    </div>
+    <span class="buyPanel_R">
+      <router-link to="/meal/buyNow/buyNow">立即购买</router-link>
+    </span>
+  </div>
+ */
+.buyPanel{
+  width: 100%;
+  height: 2.89rem;
+  background: #ffffff;
+  margin: 38px 0 0 0;
+  border-top: solid 1px #ebebeb;
+}
+  .buyPanel_L{
+    width: 67%;
+    height: 100%;
+    float: left;
+    text-align: left !important;
+    color: #333333;
+    text-align: center;
+    /*line-height: 50px;*/
+  /*  padding-right: 4%;*/
+  }
+  /*.buyPanel_L>div{
+	padding-left: 0.28rem;
+}*/
+.mint-msgbox-message {
+    color: #333!important;
+    text-align: left!important;
+    font-size: .667rem;
+    line-height: 1.5rem!important;
+}
+.mint-msgbox-btn {
+    line-height: 1.8rem!important;
+}
+    /*/*.heji{
+      width: 100%;height: 39%;
+      font-size: 15px;
+      margin-top: 4%;
+    }*/
+    .prePrice{
+      width: 100%; height: 30%;
+      font-size: 10px;
+      color: #999999;
+    }
+  .buyPanel_R{
+    width: 33%;
+    height: 100%;
+    background: linear-gradient(to right, #56b0d8 , #6f81e4);
+    float: right;
+    color: #ffffff;
+    font-size: 15px;
+    font-family: "Microsoft YaHei", 微软雅黑, "MicrosoftJhengHei", 华文细黑, STHeiti, MingLiu;
+    text-align: center;
+    line-height: 49px;
+  }
+    .buyPanel_R a{
+      width: 100%;
+      height: 100%;
+      display: inline-block;
+      color: #ffffff;
+    }
+
+
+/*p tiaoshi*/
+.tiaoshi{
+  font-size: 14px;
+  color: #8f8f94;
+}
+/*底部价格样式*/
+.sumdiv{
+	padding-left: 1.2rem;
+	padding-top: 0.35rem;
+	padding-bottom: 0.35rem;
+}
+.sumdiv .blue{
+	font-size:0.75rem;
+	color: #666!important;
+}
+.sumdiv div{
+	height: 2.19rem;
+	line-height: 2.19rem;
+	font-size:0.694rem;
+}
+.youhui{
+	padding-left: 1.17rem;
+	padding-top: 0.64rem;
+	padding-bottom: 0.64rem;
+	}
+.youhuis{
+	padding-left: 1.17rem;
+	padding-top: 0.345rem;
+	padding-bottom: 0.345rem;
+}
+.youhuis .blue{
+	color: #666!important;
+}
+ .youhuis>.heji{
+	height: 1rem;
+	line-height: 1rem;
+}
+.youhuis>.heji+div{
+	height: 1.2rem;
+	line-height:1.2rem;
+}
+.youhuis div:last-child{text-decoration:underline;font-size: 0.7rem;color:#5c9edc;}
+.youhui s{
+	font-size: 0.61rem;
+	color: #999;
+}
+.mprice{
+	font-size: 0.7rem;
+}
+.members{
+	height: 0.8rem;
+	line-height: 0.8rem;
+}
+.members+div{
+	height: 0.8rem;
+	line-height: 0.8rem;
+}
+.members span{
+font-size: 0.7rem;
+}
+.extra{
+	font-size: 0.7rem;color: #666;
+}
+.extra span:first-child{font-size: 0.8rem;}
+.extra span:nth-child(2){margin-left: 0.3rem;color: #999;}
+.buy_p1{margin-top:0.7rem;margin-bottom:0;text-align: right;font-size: 0.7rem;color: #666;}
+.buy_p2{margin-bottom:0;text-align: right;font-size: 0.7rem;color: #999;}

@@ -1,0 +1,40 @@
+﻿版本分支合并测试
+步骤1 提交到分支
+步骤2 拉取
+步骤3 切换到master
+步骤4 合并
+步骤5 从分支拉取
+步骤6 master提交
+步骤7 master推送
+
+我要删除分支wyz01
+﻿git cd到当前项目目录   哇哈哈哈或  
+wwww
+测试1
+测试122
+测试12234
+1.git init
+  git add README.md
+  git commit -m "first commit"
+  git remote add origin https://github.com/kangyanyan/vue-healthcard.git
+  
+  git pull origin master
+  git push -u origin master  输入kangyanyan @kxy19921018
+
+2. git clone [url]  --[url] 为你想要复制的项目，就可以了。
+
+git clone [url]  --[url] 为你想要复制的项目，就可以了。
+git clone [url]  --[url] 为你想要复制的项目，就可以了。
+
+3333
+4444
+=======
+克隆完成后，在当前目录下会生成一个 simplegit 目录：
+3.$ cd simplegit/ $ ls README Rakefile lib  --将复制该项目的全部记录。
+
+4.git  status
+git log
+5.git diff
+显示 END --退出 使用 q
+
+6.1
