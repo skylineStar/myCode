@@ -392,4 +392,5 @@ for(var i in add){
 	})
 	address[i]=arr
 }
-export {address,add}
+var letter = Object.keys(address);
+export {address,letter,add}

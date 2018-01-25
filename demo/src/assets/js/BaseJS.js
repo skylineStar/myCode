@@ -313,7 +313,8 @@ var getDayList=function(datestr,fill){
 	}
 	clist[m2]=crr_m	
 	
-	var all_days=42-wday//页面填充的日期总个数
+//	var all_days = 42-wday//页面填充的日期总个数
+	var all_days = days[1]+days[2]//页面填充的日期总个数
 	var lastday=all_days-clist[m2].length-days[2]//第三月剩下需要填充的天数
 	var m2days;//第二月的最后一天
 	if(lastday<0){//跨两月
