@@ -60,5 +60,11 @@ export default new Router({
       name: 'vRouter',
       component: vRouter
     },
+    //微信昵称显示问题
+    {
+      path: '/test/index',
+      name: 'wx',
+      component: index
+    },
   ]
 })

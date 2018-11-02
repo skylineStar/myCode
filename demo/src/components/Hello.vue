@@ -22,7 +22,6 @@
         <uploader :src="upURL"></uploader>
       </div>
     </div>
-    <!--<img src="~assets/logo.png">-->
   </div>
 </template>
 
